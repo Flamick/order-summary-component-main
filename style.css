@@ -1,0 +1,153 @@
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 23%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+	--primary-font: "Red Hat Display", sans-serif;
+}
+
+*,
+*:before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+body {
+	font-family: var(--primary-font);
+	background-image: url(./images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-color: var(--pale-blue);
+}
+
+.container {
+	margin: 4rem 1.6rem;
+	max-width: 350px;
+}
+
+.order-summary-card {
+	background-color: white;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-container {
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+
+	img {
+		border-radius: 20px 20px 0 0;
+	}
+}
+
+.order-summary-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.8rem 1.6rem;
+
+	h1 {
+		font-size: 1.4rem;
+		font-weight: 800;
+	}
+
+	p {
+		padding: 1rem 0 1.6rem 0;
+		font-weight: 500;
+		color: var(--desaturated-blue);
+		text-align: center;
+		line-height: 1.6rem;
+	}
+}
+
+.pricing-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--very-pale-blue);
+	padding: 1rem;
+	border-radius: 20px;
+
+	img {
+		height: 2.8rem;
+		width: 2.8rem;
+	}
+
+	a {
+		font-size: 0.8rem;
+		font-weight: 700;
+
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+			color: var(--bright-blue);
+			opacity: 0.8;
+		}
+	}
+}
+
+.price-container {
+	h2 {
+		font-size: 1rem;
+	}
+
+	p {
+		padding: 0.2rem 0;
+	}
+}
+
+.btn {
+	width: 100%;
+	text-align: center;
+	padding: 0.6rem 0;
+	border-radius: 10px;
+}
+
+.btn-payment {
+	background-color: var(--bright-blue);
+	color: white;
+	margin-top: 1.6rem;
+	box-shadow: 0px 5px 30px -10px var(--bright-blue);
+	font-weight: 800;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+}
+
+.btn-cancel {
+	padding-top: 1.4rem;
+	font-weight: 800;
+	width: 35%;
+	color: var(--desaturated-blue);
+
+	&:hover {
+		cursor: pointer;
+		color: black;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	body {
+		background-image: url(./images/pattern-background-desktop.svg);
+	}
+
+	.container {
+		margin: 9rem auto 2rem auto;
+	}
+}
